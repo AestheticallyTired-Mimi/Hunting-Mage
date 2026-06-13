@@ -1,0 +1,376 @@
+@media screen and (max-width: 1024px) {
+ 
+    header{
+        right: 0.6rem;
+        left: 0.6rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .head-right a{
+        margin-left: 1rem;
+        font-size: 0.95rem;
+    }
+ 
+    /* Hero */
+    .hero-content{
+        left: 2.5rem;
+        width: 60%;
+    }
+    .hero-content h1{
+        font-size: 2.4rem;
+    }
+    .hero-content p{
+        margin-bottom: 4rem;
+    }
+ 
+    /* About (abt) section */
+    .abt-section{
+        height: auto;
+        flex-direction: column;
+        padding: 6rem 1.5rem 2rem;
+        box-sizing: border-box;
+    }
+    .abt-grid{
+        flex-direction: column;
+        margin-top: 0;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .abt-img{
+        flex-basis: 60%;
+        width: 100%;
+        height: 20rem;
+        margin-left: 0;
+        border-radius: 1.5rem;
+    }
+    .abt-card{
+        flex-basis: auto;
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+    .abt-card h1{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .abt-card a{
+        margin-left: 0;
+        padding: 0.93rem 1rem;
+    }
+    .abt-btn{
+        font-size: 0.75rem;
+    }
+ 
+    /* About section */
+    .about-section h1{
+        font-size: 4rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .about-section p{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+ 
+    /* Faelora */
+    .faelora-content{
+        left: 2.5rem;
+        width: 55%;
+    }
+    .faelora-content h1{
+        font-size: 3rem;
+    }
+ 
+    /* Characters */
+    .char-section{
+        width: 90%;
+    }
+    .char-section h3{
+        font-size: 2.4rem;
+    }
+    .char-cards{
+        grid-template-columns: auto auto;
+    }
+ 
+    /* Contact */
+    .contact-grid{
+        grid-template-columns: 1fr 1fr;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        min-height: auto;
+    }
+    .contact-cards{
+        height: 31rem;
+    }
+    .contact-cards form{
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+    }
+    input[type="text"]{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    textarea{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+ 
+/* =============================================
+   MOBILE — max-width: 600px
+   ============================================= */
+@media screen and (max-width: 600px) {
+ 
+    /* Header */
+    header{
+        top: 0.75rem;
+        right: 0.5rem;
+        left: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 1rem;
+    }
+    .head-left img{
+        width: 2rem;
+        height: 2rem;
+    }
+     .menu-toggle{
+        display: none;
+    }
+ 
+    /* Hamburger icon */
+    .menu-icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.31rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .menu-icon span{
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #d9ccfd;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    /* Nav links become a dropdown panel */
+    .head-right{
+        position: absolute;
+        top: calc(100% + 0.6rem);
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        background-color: #9876f433;
+        backdrop-filter: blur(50px);
+        border-radius: 1rem;
+        padding: 1rem 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
+    }
+    .head-right a{
+        margin-left: 1rem;
+        font-size: 1rem;
+    }
+ 
+    /* Toggle open state */
+    .menu-toggle:checked ~ .head-right{
+        max-height: 20rem;
+        opacity: 1;
+        padding: 1rem 0;
+    }
+ 
+    /* Animate icon into an X when checked */
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1){
+        transform: translateY(0.43rem) rotate(45deg);
+    }
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2){
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3){
+        transform: translateY(-0.43rem) rotate(-45deg);
+    }
+ 
+    /* Hero */
+    .hero-content{
+        left: 1rem;
+        right: 1rem;
+        top: 6.5rem;
+        width: auto;
+        height: auto;
+    }
+    .hero-content h1{
+        font-size: 1.8rem;
+    }
+    .hero-content p{
+        font-size: 0.95rem;
+        margin-bottom: 2.5rem;
+    }
+    .hero-content a{
+        padding: 0.75rem 2rem;
+    }
+    .play-btn{
+        font-size: 0.95rem;
+    }
+ 
+    /* Abt section */
+    .abt-section{
+        padding: 5.5rem 1rem 1.5rem;
+    }
+    .abt-grid{
+        gap: 1rem;
+    }
+    .abt-img{
+        height: 14rem;
+        border-radius: 1rem;
+    }
+    .abt-card h1{
+        font-size: 1.9rem;
+    }
+    .abt-card a{
+        padding: 0.75rem 2rem;
+    }
+    .abt-btn{
+        font-size: 0.95rem;
+    }
+ 
+    /* About section */
+    .about-section h1{
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .about-section p{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 0.9rem;
+    }
+    .gcards{
+        width: 13rem;
+        height: 16.5rem;
+    }
+ 
+    /* Faelora */
+    .faelora-section{
+        margin-top: 5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .faelora-vid{
+        position: relative;
+        width: 90%;
+        height: 100%;
+        order: 1;
+    }
+    .faelora-video{
+        flex-basis: 80rem;
+        height: 28rem;
+        position: relative;
+        margin-left: 3.12rem;
+        border-radius: 3.12rem;
+        overflow: hidden;
+        object-position: 100% 0%;
+    }
+    .faelora-video video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .faelora-content{
+        position: relative;
+        top: auto;
+        left: 2.5rem;
+        width: 80%;
+        height: auto;
+        order: 2;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+    .faelora-content h1{
+        font-size: 2.2rem;
+    }
+    .faelora-content p{
+        font-size: 0.9rem;
+    }
+ 
+    /* Characters */
+    .char-section{
+        width: 92%;
+        margin-top: 3rem;
+    }
+    .char-section h3{
+        font-size: 1.8rem;
+    }
+    .char-cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    .card h2{
+        font-size: 0.9rem;
+    }
+    .card p{
+        font-size: 0.7rem;
+        max-width: 90%;
+    }
+ 
+    /* Contact */
+    .contact-section h3{
+        font-size: 1.8rem;
+        margin-top: 5rem;
+    }
+    .contact-grid{
+        grid-template-columns: 1fr;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .contact-cards{
+        height: 31rem;
+    }
+    .contact-cards form{
+        margin-left: 0;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+    input[type="submit"]{
+        width: 100%;
+        padding: 0.75rem;
+    }
+ 
+    /* Footer */
+    footer{
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+}
+ 
+/* =============================================
+   EXTRA SMALL — max-width: 380px
+   ============================================= */
+@media screen and (max-width: 380px) {
+    .hero-content h1{
+        font-size: 1.5rem;
+    }
+    .abt-card h1{
+        font-size: 1.6rem;
+    }
+    .about-section h1{
+        font-size: 1.8rem;
+    }
+    .faelora-content h1{
+        font-size: 1.8rem;
+    }
+    .char-cards{
+        grid-template-columns: 1fr;
+    }
+}
